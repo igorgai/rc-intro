@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="UTF-8">
+    <meta name="author" content="Igor Gai">
     <link rel="SHORTCUT ICON" type='image/x-icon' href="http://www.rotting-christ.com/home/wp-content/uploads/2012/08/rcico.png" />
     <title>++ROTTING CHRIST OFFICIAL WEBSITE++</title>
     <style type="text/css">
@@ -29,8 +30,10 @@
 
         #bg2 {
             background: url(http://www.rotting-christ.com/home/wp-content/uploads/2013/02/enter.jpg) no-repeat center;
+            /*display: none;*/
+            filter:alpha(opacity=0);
             height: 100%;
-            display: none;
+            opacity:0;
             width: 100%;
         }
 
@@ -117,7 +120,10 @@
                     left: 584
                 }, 2000, function () {
                     $('#demon-left, #demon-right, #snake-left, #snake-right').fadeOut(1000);
-                    $('#bg2, #enter').fadeIn(1000);
+                    $('#enter').fadeIn(500);
+                    $('#bg2').animate({
+                        opacity: 1
+                    }, 500);
 
                 });
             });
