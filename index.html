@@ -25,7 +25,7 @@
             }
 
             #skip-video {
-                bottom: 160px;
+                bottom: 180px;
                 height: 100px;
                 left: 400px;
                 width: 235px;
@@ -92,7 +92,7 @@
             }
 
             #demon-right {
-                /*background: url() no-repeat center;*/
+                background: url(http://www.rotting-christ.com/home/wp-content/uploads/2013/02/right_demon.png) no-repeat center;
                 left: 538px;
             }
 
@@ -125,24 +125,25 @@
         <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
         <script>
             $(document).ready(function () {
-                console.log('ready. loading...');
+//                console.log('ready. loading...');
                 $('#welcome').hide();
-                $('#skip-video').click(function() {
+                $('#skip-video').click(function(event) {
+                    event.preventDefault();
                     $('#video').fadeOut(1500, function () {
                         $(this).remove();
                         $('#welcome').fadeIn(1000);
                     });
                 });
             });
-            $('#bg1').load(function () {
-                console.log('bg1 loaded');
-            });
-            $('#bg2').load(function () {
-                console.log('bg2 loaded');
-            });
+//            $('#bg1').load(function () {
+//                console.log('bg1 loaded');
+//            });
+//            $('#bg2').load(function () {
+//                console.log('bg2 loaded');
+//            });
 
             $(window).load(function () {
-                console.log('loading complete');
+//                console.log('loading complete');
                 $("#album-cover").click(function () {
                     $('#bg1').fadeOut(1500, function () {
                         $('#season-of-mist, #album-cover').remove();
@@ -182,7 +183,8 @@
             <div id="snake-left" class="snake"></div>
             <div id="snake-right" class="snake"></div>
             <div id="demon-left" class="demon"></div>
-            <img src="http://www.rotting-christ.com/home/wp-content/uploads/2013/02/right_demon.png" id="demon-right" class="demon" />
+            <!--<img src="http://www.rotting-christ.com/home/wp-content/uploads/2013/02/right_demon.png" id="demon-right" class="demon" />-->
+            <div id="demon-right" class="demon"></div>
             <div id="album-cover" title="proceed..."></div>
             <a href="http://e-shop.season-of-mist.com/en/bands/rotting-christ/1725" id="season-of-mist" target="_blank"></a>
             <a href="http://www.rotting-christ.com/home/" target="_self" id="enter" title="Enter site"></a>
