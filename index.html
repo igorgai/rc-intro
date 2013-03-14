@@ -125,7 +125,6 @@
         <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
         <script>
             $(document).ready(function () {
-//                console.log('ready. loading...');
                 $('#welcome').hide();
                 $('#skip-video').click(function(event) {
                     event.preventDefault();
@@ -135,15 +134,8 @@
                     });
                 });
             });
-//            $('#bg1').load(function () {
-//                console.log('bg1 loaded');
-//            });
-//            $('#bg2').load(function () {
-//                console.log('bg2 loaded');
-//            });
 
             $(window).load(function () {
-//                console.log('loading complete');
                 $("#album-cover").click(function () {
                     $('#bg1').fadeOut(1500, function () {
                         $('#season-of-mist, #album-cover').remove();
