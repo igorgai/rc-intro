@@ -13,33 +13,12 @@
             margin: 0;
         }
 
-        #video {
-            background: transparent url(//www.rotting-christ.com/home/wp-content/uploads/2013/03/intro_video_bg.jpg?v=1) no-repeat 50% 0;
-            height: 700px;
-            margin: 0 auto;
-            padding-top: 119px;
-            width: 1030px;
-        }
-
-        #video iframe {
-            display: block;
-            margin: 0 auto;
-        }
-
-        #skip-video {
-            bottom: 180px;
-            height: 100px;
-            left: 400px;
-            width: 235px;
-        }
-
         #welcome {
             height: 843px;
             margin: 0 auto;
             width: 986px;
         }
 
-        #skip-video,
         #welcome > div,
         #welcome > img,
         #enter,
@@ -47,7 +26,6 @@
             position: absolute;
         }
 
-        #video,
         #welcome,
         #album-cover {
             position: relative;
@@ -139,25 +117,9 @@
         <a href="//e-shop.season-of-mist.com/en/bands/rotting-christ/1725" id="season-of-mist" target="_blank"></a>
         <a href="//www.rotting-christ.com/home/" target="_self" id="enter" title="Enter site"></a>
     </div>
-    <div id="video">
-        <iframe width="699" height="393" src="http://www.youtube.com/embed/ia8oE_zcedk" frameborder="0"
-                allowfullscreen></iframe>
-        <a id="skip-video" href="#" title="skip video"></a>
-    </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $('#welcome').hide();
-            $('#skip-video').click(function (event) {
-                event.preventDefault();
-                $('#video').fadeOut(1500, function () {
-                    $(this).remove();
-                    $('#welcome').fadeIn(1000);
-                });
-            });
-        });
-
         $(window).load(function () {
             $("#album-cover").click(function () {
                 $('#bg1').fadeOut(1500, function () {
