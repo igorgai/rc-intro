@@ -109,7 +109,7 @@
             left: 0;
             position: absolute;
             top: 0;
-            width: 100%;;
+            width: 100%;
         }
     </style>
 </head>
@@ -128,10 +128,15 @@
     </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="http://fgnass.github.io/spin.js/dist/spin.min.js"></script>
     <script>
-        $("body").append('<div id="preloader">Loading...</div>');
+        $("body").append('<div id="preloader"></div>');
+        var preloader = document.getElementById('preloader');
+        var spinner = new Spinner({color: '#eee'}).spin(preloader);
+
         $(window).load(function () {
-            $("#preloader").fadeOut(800, function () {
+            spinner.stop();
+            $(preloader).fadeOut(800, function () {
                 this.remove();
             });
             $("#album-cover").click(function () {
