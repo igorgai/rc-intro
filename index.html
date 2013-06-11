@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="Igor Gai">
+    <meta name="author" content="Igor Gai <i@igorgai.com>">
     <link rel="SHORTCUT ICON" type='image/x-icon'
           href="//www.rotting-christ.com/home/wp-content/uploads/2012/08/rcico.png"/>
     <title>++ROTTING CHRIST OFFICIAL WEBSITE++</title>
@@ -85,7 +85,7 @@
         }
 
         .sprites {
-            background-image: url(//www.rotting-christ.com/home/wp-content/uploads/2013/04/sprites.png?v=1);
+            background-image: url(http://www.rotting-christ.com/home/wp-content/uploads/2013/04/sprites.png?v=1);
             background-color: transparent;
             background-repeat: no-repeat;
         }
@@ -101,26 +101,39 @@
             top: 304px;
             width: 341px;
         }
+
+        #preloader {
+            background-color: #000;
+            color: #fff;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;;
+        }
     </style>
 </head>
 <body>
-
     <div id="welcome">
-        <img id="bg2" alt="enter site" src="//www.rotting-christ.com/home/wp-content/uploads/2013/02/enter.jpg?v=1"/>
-        <img id="bg1" alt="proceed..." src="//www.rotting-christ.com/home/wp-content/uploads/2013/02/back_1.jpg?v=1"/>
+        <img id="bg2" alt="enter site" src="http://www.rotting-christ.com/home/wp-content/uploads/2013/02/enter.jpg?v=1"/>
+        <img id="bg1" alt="proceed..." src="http://www.rotting-christ.com/home/wp-content/uploads/2013/02/back_1.jpg?v=1"/>
 
         <div id="snake-left" class="snake sprites"></div>
         <div id="snake-right" class="snake sprites"></div>
         <div id="demon-left" class="demon sprites"></div>
         <div id="demon-right" class="demon sprites"></div>
         <div id="album-cover" title="proceed..."></div>
-        <a href="//e-shop.season-of-mist.com/en/bands/rotting-christ/1725" id="season-of-mist" target="_blank"></a>
-        <a href="//www.rotting-christ.com/home/" target="_self" id="enter" title="Enter site"></a>
+        <a href="http://e-shop.season-of-mist.com/en/bands/rotting-christ/1725" id="season-of-mist" target="_blank"></a>
+        <a href="http://www.rotting-christ.com/home/" target="_self" id="enter" title="Enter site"></a>
     </div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script>
+        $("body").append('<div id="preloader">Loading...</div>');
         $(window).load(function () {
+            $("#preloader").fadeOut(800, function () {
+                this.remove();
+            });
             $("#album-cover").click(function () {
                 $('#bg1').fadeOut(1500, function () {
                     $('#season-of-mist, #album-cover').remove();
